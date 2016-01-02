@@ -1,0 +1,37 @@
+<body class="login-background" />
+
+<div class="ui middle aligned center aligned grid" id="login-form">
+  <div class="column m-width-450 clear">
+    <div class="ui container m-width-450">
+      <%# <img src="http://www.mejorproyecto.com/templating/img/magento-logo%5B1%5D(1).png" id="logo"> %>
+      <img src="<%= asset_path('logo.png') %>" id="logo">
+    </div>
+    <% if current_user %>
+      <h1 class="white">Welcome, <%= current_user.first_name %></h1>
+      <div class="ui stacked segment login-form-background">
+        <a href="<%= logout_path %>", data-method="delete">
+          <button class="ui fluid large inverted button">Logout</button>
+        </a>
+      </div>
+    <% else %>
+      <%= form_for :session, url: {action: "create"}, html: {class: "ui large form"} do |f| %>
+        <div class="ui stacked segment login-form-background">
+          <div class="field">
+            <div class="ui left input">
+              <%= f.text_field :username, placeholder: "Username" %>
+            </div>
+          </div>
+          <div class="field">
+            <div class="ui left input">
+              <%= f.password_field :password, placeholder: "Password" %>
+            </div>
+          </div>
+          <%= f.submit "Login", class: "ui fluid large inverted submit button" %>
+        </div>
+        <div class="ui error message">
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+

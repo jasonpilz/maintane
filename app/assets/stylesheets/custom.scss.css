@@ -1,0 +1,37 @@
+#login-form {
+  height: 100%;
+}
+
+.login-background {
+  background-color: #292929;
+}
+
+.clear {
+  background-color: rgba(255,255,255,0.0);
+}
+
+.login-form-background {
+  background-color: rgba(255,255,255,0.02) !important;
+}
+
+.top-bottom-pad-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.m-width-450 {
+  max-width: 450px;
+}
+
+#logo {
+  max-width: 250px;
+}
+
+img {
+  max-width: 450px;
+  margin-bottom: 15px;
+}
+
+.white {
+  color: white;
+}
