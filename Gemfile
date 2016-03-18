@@ -11,9 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt'
-
 gem 'sprockets-rails', '~> 2.3'
-
 gem 'less-rails-semantic_ui'
 gem 'autoprefixer-rails'
 gem 'therubyracer', platforms: :ruby
